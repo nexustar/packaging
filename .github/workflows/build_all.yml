@@ -2,7 +2,7 @@ name: build-reproducible
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
