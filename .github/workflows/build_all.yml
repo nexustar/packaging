@@ -13,7 +13,7 @@ jobs:
     - name: Install TBD
       run: git clone https://github.com/reproducible-tidb/TBD.git ../TBD
     - name: Run jobs
-      run: source ../TBD/TBD.sh tidb.TBD
+      run: find ./*.TBD -type f -exec ../TBD/TBD.sh {} \;
       env:
         CI_NAME: githubaction
     - name: Move result json files
