@@ -18,8 +18,6 @@ jobs:
         CI_NAME: githubaction
     - name: Move result json files
       run: |
-        sha256sum=`sha256sum /publish/$pkgname-$pkgver-$pkgrel.tar | cut -d ' ' -f1`
-        echo "{\"version\":\"$pkgver\",\"sha256\":\"$sha256sum\",\"timestamp\":\""`date +%s`"\"}" > /publish/$pkgname-$pkgver-$pkgrel.json
         mkdir results && mv ./*.json results/
     - name: Publish results
       uses: JamesIves/github-pages-deploy-action@4.1.4
