@@ -17,7 +17,7 @@ jobs:
         env
         tty
         echo $?
-        ../TBD/TBD.sh tidb.TBD
+        ./TBD.sh tidb.TBD
       env:
         CI_NAME: githubaction
     - name: Move result json files
