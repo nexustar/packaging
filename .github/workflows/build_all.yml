@@ -15,6 +15,7 @@ jobs:
     - name: Run jobs
       run: |
         env
+        tty
         ../TBD/TBD.sh tidb.TBD
       env:
         CI_NAME: githubaction
