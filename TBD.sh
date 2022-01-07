@@ -19,6 +19,7 @@ CRI="${TBD_CRI:-docker}"
 withTTY=""
 if [ $(tty) -ne "not a tty" ]; then
   withTTY="-it"
+fi
 
 $CRI run $withTTY \
     -v $(realpath $1):/src/pkgmeta \
